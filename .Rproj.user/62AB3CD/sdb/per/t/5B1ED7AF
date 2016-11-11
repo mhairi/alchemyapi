@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "context('All current tests')\n\ntest_that('We can get keywords', {\n  url <- 'mhairihmcneill.com'\n  api_key <- '04b3c95092c05f2b850ed0b208a9a8947dbec764'\n\n  df <- get_keywords(url, api_key)\n  expect_is(df, \"data.frame\")\n  expect_equal(ncol(df), 3)\n  expect_true(nrow(df) > 10)\n})\n\ntest_that('We can get concepts', {\n  url <- 'mhairihmcneill.com'\n  api_key <- '04b3c95092c05f2b850ed0b208a9a8947dbec764'\n\n  df <- get_concepts(url, api_key)\n  expect_is(df, \"data.frame\")\n  expect_equal(ncol(df), 6)\n  expect_true(nrow(df) > 5)\n})\n\ntest_that('We can get text', {\n  url <- 'mhairihmcneill.com'\n  api_key <- '04b3c95092c05f2b850ed0b208a9a8947dbec764'\n\n  t <- get_text(url, api_key)\n  expect_is(t, \"character\")\n  expect_equal(length(t), 1)\n})\n\n\ntest_that('We can get emotions', {\n  url <- 'mhairihmcneill.com'\n  api_key <- '04b3c95092c05f2b850ed0b208a9a8947dbec764'\n\n  df <- get_emotions(url, api_key)\n  expect_is(df, \"data.frame\")\n  expect_equal(ncol(df), 3)\n  expect_true(nrow(df) == 5)\n})\n\ntest_that('We can get sentiment', {\n  url <- 'mhairihmcneill.com'\n  api_key <- '04b3c95092c05f2b850ed0b208a9a8947dbec764'\n\n  s <- get_sentiment(url, api_key)\n  expect_is(s, \"numeric\")\n  expect_equal(length(s), 1)\n})\n\n",
+    "created" : 1470580021558.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3819038179",
+    "id" : "5B1ED7AF",
+    "lastKnownWriteTime" : 1470586846,
+    "last_content_update" : 1470586846991,
+    "path" : "~/Documents/APIs/alchemyapi/tests/testthat/test.R",
+    "project_path" : "tests/testthat/test.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
